@@ -74,4 +74,4 @@ const UserProfile = ({ id }) => {
   );
 };
 
-export default UserProfile;
+export default UserProfile;cd
