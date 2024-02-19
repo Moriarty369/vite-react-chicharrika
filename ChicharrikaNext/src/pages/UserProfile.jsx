@@ -1,4 +1,4 @@
-import { useParams, useLocation } from "react-router-dom";
+import { useParams, useLocation, useNavigate } from "react-router-dom";
 
 import "../styles/UserProfile.css";
 
@@ -9,6 +9,14 @@ const UserProfile = () => {
 
   const userData = location.state && location.state.userData;
   console.log("userData es: ", userData);
+
+  //constante para redirigir a la página de edición de perfil
+  const navigate = useNavigate();
+
+  const handleEditClick = () => {
+    // Redirigir a la página de edición de perfil
+    navigate(`/edit-profile/${userId}`, { state: { userData: userData } });
+  };
 
   if (!userData) {
     return <div>Cargando...</div>;
@@ -44,8 +52,9 @@ const UserProfile = () => {
         >
           Flipado
         </button>
+        </div>
+      <button onClick={() => handleEditClick()}>Editar Info de usuario</button>
       </div>
-    </div>
   );
 };
 
