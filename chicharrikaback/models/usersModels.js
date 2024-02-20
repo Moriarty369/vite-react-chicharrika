@@ -13,4 +13,3 @@ const UsersModels=db.define("clients",{
    
 })
 export default UsersModels;
-

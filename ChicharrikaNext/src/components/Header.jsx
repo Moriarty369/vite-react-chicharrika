@@ -63,7 +63,7 @@ const Header = () => {
        <Link to="/" className="logo-header-r">
             <LogoHeaderR />
         </Link>
-      <header>
+      <header className='header-test'>
       {/* <VoiceControl onVoiceCommand={handleVoiceCommand} /> */}
           <DarkButton  />
         <div className='search-container'>

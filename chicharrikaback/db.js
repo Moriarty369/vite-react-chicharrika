@@ -1,9 +1,10 @@
-import mysql from 'mysql2';
 import { Sequelize } from 'sequelize';
+import mysql2 from 'mysql2';
 
-// Configurar la conexión a MySQL
-const db = new Sequelize("chicharrika","root","Segismundo.36",{
-    host: 'localhost',
-    dialect:"mysql",
-  });
-  export default db;
+const db = new Sequelize("chicharrika", "root", "Segismundo.36", {
+  host: 'localhost',
+  dialect: "mysql",
+  dialectModule: mysql2, // Agrega esta línea
+});
+
+export default db;

@@ -5,7 +5,3 @@ const routes = express.Router()
 
 routes.post("/api/register",CreateUsers)
 export default routes;
-
-
-
-
